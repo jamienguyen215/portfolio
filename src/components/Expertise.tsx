@@ -1,44 +1,43 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faChartBar, faBrain } from '@fortawesome/free-solid-svg-icons'; // Changed icons
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
+const labelsDataAnalysis = [
     "Python",
+    "R",
     "SQL",
-    "PostgreSQL",
-    "Postman"
+    "Advanced Excel",
+    "SPSS",
+    "Data Cleaning",
+    "Data Mining",
+    "Statistical Programming"
 ];
 
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+const labelsDataVisualization = [
+    "Tableau",
+    "Power BI",
+    "Advanced PowerPoint",
+    "Adobe Creative Suite",
+     
 ];
 
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+const labelsAnalyticalMethods = [
+    "Linear Regression",
+    "Logistic Regression",
+    "Naïve Bayes",
+    "K-NN",
+    "Decision Tree",
+    "Time Series",
+
+    "Monte Carlo Simulation",
+    "XGBoost (XGBRegressor)",
+    "Descriptive Analytics",
+    "Diagnostic Analytics",
+    "Predictive Analytics",
+    "Prescriptive Analytics"
 ];
 
 function Expertise() {
@@ -48,36 +47,36 @@ function Expertise() {
             <h1>Expertise</h1>
             <div className="skills-grid">
                 <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/> {/* Changed icon */}
+                    <h3>Data Analysis</h3>
+                    <p>Proficient in extracting, cleaning, and analyzing complex datasets to derive actionable insights and inform strategic decision-making. Experienced in utilizing various statistical programming languages and tools to perform in-depth analysis.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
+                        <span className="chip-title">Tools & Technologies:</span>
+                        {labelsDataAnalysis.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <FontAwesomeIcon icon={faChartBar} size="3x"/> {/* Changed icon */}
+                    <h3>Data Visualization</h3>
+                    <p>Skilled in creating compelling data visualizations and dashboards to effectively communicate complex information to both technical and non-technical audiences. Adept at using industry-leading data visualization tools to present data in a clear and insightful manner.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
+                        <span className="chip-title">Tools:</span>
+                        {labelsDataVisualization.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <FontAwesomeIcon icon={faBrain} size="3x"/> {/* Changed icon */}
+                    <h3>Analytical Methods</h3>
+                    <p>Possess a strong foundation in applying diverse analytical methods and techniques to solve business problems and drive data-driven solutions. Experienced in implementing various statistical and machine learning models to analyze data and generate predictions.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
+                        <span className="chip-title">Methods & Types:</span>
+                        {labelsAnalyticalMethods.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>

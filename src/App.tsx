@@ -8,6 +8,7 @@ import {
   Navigation,
   Footer,
 } from "./components";
+import Education from './components/Education'; // Import Education separately
 import FadeIn from './components/FadeIn';
 import './index.scss';
 
@@ -33,6 +34,7 @@ function App() {
             <Main/>
             <Expertise/>
             <Timeline/>
+            <Education/>
             <Project/>
             <Contact/>
         </FadeIn>
